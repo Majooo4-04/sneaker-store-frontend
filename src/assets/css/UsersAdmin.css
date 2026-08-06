@@ -1,0 +1,331 @@
+/* HEADER DE PAGINA */
+
+.page-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-bottom:1px solid #1E1E1E;
+  padding-bottom:20px;
+  margin-bottom:24px;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.page-header h1{
+  font-size:clamp(26px,4vw,34px);
+  font-weight:900;
+  letter-spacing:-.03em;
+  text-transform:uppercase;
+  margin:0 0 6px;
+  line-height:1;
+}
+
+.page-header p{
+  font-size:12px;
+  letter-spacing:.04em;
+  color:#555;
+  margin:0;
+}
+
+.page-header button{
+  background:#F0E040;
+  border:1px solid #F0E040;
+  color:#0A0A0A;
+  padding:11px 18px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.15s;
+}
+
+.page-header button:hover{
+  background:#F5F5F0;
+  border-color:#F5F5F0;
+}
+
+
+/* GRID DE USUARIOS */
+
+.users-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1px;
+  background:#1A1A1A;
+}
+
+.user-card{
+  background:#0A0A0A;
+  padding:26px 20px;
+  text-align:center;
+  transition:.2s;
+}
+
+.user-card:hover{
+  background:#111;
+}
+
+.avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#F0E040;
+  color:#0A0A0A;
+  font-weight:900;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 14px;
+}
+
+.user-card h3{
+  font-size:14px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  margin:0 0 4px;
+}
+
+.user-card p{
+  font-size:11px;
+  color:#555;
+  margin:0 0 14px;
+}
+
+.role{
+  display:inline-block;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#666;
+  border:1px solid #2A2A2A;
+  padding:5px 10px;
+  margin-bottom:12px;
+}
+
+
+/* ESTADO */
+
+.user-status{
+  display:block;
+  width:fit-content;
+  margin:0 auto 16px;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:5px 10px;
+  border:1px solid;
+}
+
+.user-status.active{
+  color:#2ECC71;
+  border-color:rgba(46,204,113,.3);
+  background:rgba(46,204,113,.08);
+}
+
+.user-status.inactive{
+  color:#666;
+  border-color:#2A2A2A;
+  background:#111;
+}
+
+
+/* ACCIONES */
+
+.buttons{
+  display:flex;
+  gap:8px;
+}
+
+.buttons button{
+  flex:1;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:8px 0;
+  cursor:pointer;
+  border:1px solid #2A2A2A;
+  background:none;
+  color:#888;
+  transition:.15s;
+}
+
+.buttons button:first-child:hover{
+  border-color:#F0E040;
+  color:#F0E040;
+}
+
+.buttons button:last-child:hover{
+  border-color:#E74C3C;
+  color:#E74C3C;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+  .user-card{
+    padding:20px;
+  }
+}
+
+/* Feedback visual al pasar el cursor sobre la etiqueta de estado */
+.user-status {
+  transition: opacity 0.2s;
+  user-select: none;
+}
+
+.user-status:hover {
+  opacity: 0.8;
+}
+
+/* Estilo simple si quieres diferenciar el botón de eliminar de las tarjetas */
+.btn-delete-card {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* SWITCH INTERACTIVO (TOGGLE) */
+.status-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2e7d32; /* Verde activo */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* ETIQUETA DE TEXTO */
+.status-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.status-label.activo {
+  color: #2e7d32;
+}
+
+.status-label.inactivo {
+  color: #c62828;
+}
+
+/* ESTILOS DE BOTONES */
+.btn-primary {
+  background: #FFD600;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #111;
+}
+
+.btn-edit {
+  background: #eee;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+}
+
+.btn-delete {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+/* FILTRO DE USUARIOS */
+.filtro-usuarios {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filtro-btn {
+  background: none;
+  border: 1px solid #2A2A2A;
+  color: #888;
+  padding: 8px 16px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.filtro-btn:hover {
+  color: #F5F5F0;
+  border-color: #444;
+}
+
+.filtro-btn.active {
+  background: #F0E040;
+  border-color: #F0E040;
+  color: #0A0A0A;
+}

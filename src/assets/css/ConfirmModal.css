@@ -1,0 +1,70 @@
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 600;
+}
+
+.confirm-box {
+  width: 420px;
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+  animation: scale .25s;
+  color: #222; /* FIX: Asegura que el texto general sea oscuro */
+}
+
+.confirm-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.confirm-box h2 {
+  margin: 0;
+  color: #111; /* FIX: Color explícito para el título */
+}
+
+.confirm-box p {
+  color: #555; /* Le da un tono gris oscuro legible */
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cancel {
+  background: #ddd;
+  color: #333; /* FIX: Color de texto del botón */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete {
+  background: #ff4444;
+  color: white; /* Mantener texto blanco sobre fondo rojo */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

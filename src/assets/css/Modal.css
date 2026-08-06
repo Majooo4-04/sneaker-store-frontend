@@ -1,0 +1,287 @@
+.modal-overlay {
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,.75);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding: 24px;
+  box-sizing:border-box;
+  overflow-y:auto;
+
+  z-index:500;
+
+  animation:fade .25s;
+
+}
+
+.modal {
+
+  width:500px;
+  max-width:95%;
+
+  max-height:90vh;
+
+  display:flex;
+  flex-direction:column;
+
+  background:#0F0F0F;
+
+  border:1px solid #2A2A2A;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+  animation:scale .25s;
+
+  color:#F5F5F0;
+
+}
+
+
+
+/* HEADER */
+
+.modal-header {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:22px;
+
+  border-bottom:1px solid #222;
+
+  flex-shrink:0;
+
+}
+
+
+
+.modal-header h2 {
+
+  margin:0;
+
+  font-size:22px;
+
+  color:#F5F5F0;
+
+  font-weight:800;
+
+}
+
+
+
+/* BOTON X */
+
+.modal-close {
+
+  background:none;
+
+  border:none;
+
+  font-size:22px;
+
+  cursor:pointer;
+
+  color:#F5F5F0;
+
+}
+
+
+
+/* CONTENIDO */
+
+.modal-body {
+
+  padding:25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+  color:#F5F5F0;
+
+  overflow-y:auto;
+
+  flex:1;
+
+  min-height:0;
+
+}
+
+
+
+/* INPUTS */
+
+.modal-body input,
+.modal-body select {
+
+
+  padding:12px;
+
+
+  border:1px solid #333;
+
+
+  border-radius:6px;
+
+
+  font-size:15px;
+
+
+  outline:none;
+
+
+  background:#181818;
+
+
+  color:#F5F5F0;
+
+
+}
+
+
+
+.modal-body input::placeholder {
+
+  color:#777;
+
+}
+
+
+
+.modal-body input:focus {
+
+
+  border-color:#F0E040;
+
+
+}
+
+
+
+/* FOOTER */
+
+.modal-footer {
+
+  padding:20px;
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  gap:10px;
+
+  border-top:1px solid #222;
+
+  flex-shrink:0;
+
+}
+
+
+
+/* CANCELAR */
+
+.btn-cancel {
+
+  padding:10px 18px;
+
+  border:1px solid #333;
+
+  background:#181818;
+
+  color:#F5F5F0;
+
+  cursor:pointer;
+
+  border-radius:6px;
+
+}
+
+
+
+/* GUARDAR */
+
+.btn-save {
+
+
+  padding:10px 20px;
+
+
+  background:#F0E040;
+
+
+  color:#0A0A0A;
+
+
+  border:none;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+  border-radius:6px;
+
+
+}
+
+
+
+.btn-save:hover {
+
+  background:#F5F5F0;
+
+}
+
+
+
+
+@keyframes fade {
+
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+
+}
+
+
+
+@keyframes scale {
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+  }
+
+
+  to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+  }
+
+}

@@ -1,0 +1,167 @@
+.page-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.page-header h1{
+font-size:30px;
+font-weight:700;
+color:#111;
+margin-bottom:5px;
+}
+
+.page-header p{
+color:#777;
+font-size:15px;
+}
+
+.page-header button{
+background:#111;
+color:#fff;
+border:none;
+padding:12px 22px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.page-header button:hover{
+background:#FFD600;
+color:#111;
+}
+
+.search-box{
+width:100%;
+padding:13px 18px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+margin-bottom:25px;
+font-size:15px;
+transition:.3s;
+}
+
+.search-box:focus{
+border-color:#FFD600;
+}
+
+.admin-table{
+width:100%;
+border-collapse:collapse;
+background:#fff;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.admin-table thead{
+background:#111;
+color:#fff;
+}
+
+.admin-table th{
+padding:18px;
+font-size:14px;
+text-align:left;
+font-weight:600;
+}
+
+.admin-table td{
+padding:18px;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.admin-table tbody tr{
+transition:.25s;
+}
+
+.admin-table tbody tr:hover{
+background:#fafafa;
+}
+
+.status{
+padding:7px 14px;
+border-radius:30px;
+font-size:12px;
+font-weight:600;
+}
+
+.active{
+background:#DDF8E6;
+color:#149C4A;
+}
+
+.inactive{
+background:#FFE3E3;
+color:#D62828;
+}
+
+.edit{
+background:#0D6EFD;
+color:#fff;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+transition:.25s;
+}
+
+.edit:hover{
+background:#0A58CA;
+}
+
+.status-btn{
+background:#FFC107;
+color:#111;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+transition:.25s;
+}
+
+.status-btn:hover{
+background:#E0A800;
+}
+
+.delete{
+background:#DC3545;
+color:#fff;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+transition:.25s;
+}
+
+.delete:hover{
+background:#BB2D3B;
+}
+
+.admin-table button{
+font-size:13px;
+font-weight:600;
+}
+
+.modal-body input,
+.modal-body select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+outline:none;
+}
+
+.modal-body input:focus,
+.modal-body select:focus{
+border-color:#FFD600;
+}

@@ -1,0 +1,382 @@
+.sneaker-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 56px;
+  background: #0A0A0A;
+  border-bottom: 1px solid #1E1E1E;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  gap: 24px;
+  text-align: left; /* Cancela el centrado heredado global */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.sneaker-navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #F5F5F0;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sneaker-navbar-logo span {
+  color: #F0E040;
+}
+
+/* LINKS CENTRALES */
+.sneaker-navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sneaker-navbar-link {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  padding: 4px 0;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.sneaker-navbar-link:hover,
+.sneaker-navbar-link.active {
+  color: #F0E040;
+}
+
+.sneaker-navbar-link.active {
+  border-bottom: 1px solid #F0E040;
+}
+
+/* DROPDOWN CATÁLOGO */
+.sneaker-catalog-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sneaker-catalog-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sneaker-catalog-button:hover {
+  color: #F0E040;
+}
+
+.sneaker-catalog-arrow {
+  font-size: 8px;
+  color: #F0E040;
+}
+
+.sneaker-catalog-dropdown {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  background: #0A0A0A;
+  border: 1px solid #1E1E1E;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+}
+
+.sneaker-catalog-dropdown a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sneaker-catalog-dropdown a:hover {
+  background: #181818;
+  color: #F0E040;
+}
+
+/* ACCIONES (DERECHA) */
+.sneaker-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sneaker-icon-btn {
+  display: flex;
+  align-items: center;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sneaker-icon-btn:hover,
+.sneaker-icon-btn.active {
+  color: #F0E040;
+}
+
+.sneaker-divider {
+  width: 1px;
+  height: 20px;
+  background: #1E1E1E;
+}
+
+.sneaker-auth-link {
+  text-decoration: none;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.sneaker-auth-link:hover {
+  color: #F5F5F0;
+}
+
+.sneaker-register-btn {
+  background: #F0E040;
+  color: #0A0A0A;
+  padding: 7px 14px;
+  font-size: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+
+.sneaker-register-btn:hover {
+  opacity: 0.9;
+}
+
+/* MOBILE Y DRAWER */
+.sneaker-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #F5F5F0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sneaker-drawer {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: #0A0A0A;
+  border-bottom: 1px solid #1E1E1E;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  text-align: left;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+
+.sneaker-drawer-link {
+  padding: 12px 0;
+  border-bottom: 1px solid #1A1A1A;
+  color: #F5F5F0;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sneaker-drawer-subtitle {
+  color: #F0E040;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 12px 0 4px 0;
+}
+
+.sneaker-drawer-sublink {
+  padding: 8px 0 8px 12px;
+  color: #888;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid #111;
+}
+
+.sneaker-drawer-divider {
+  height: 12px;
+}
+
+.sneaker-register-mobile {
+  color: #F0E040;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .sneaker-navbar-center,
+  .sneaker-navbar-actions {
+    display: none;
+  }
+
+  .sneaker-hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+}
+/* ==========================
+   PERFIL
+========================== */
+
+.sneaker-profile{
+  position:relative;
+}
+
+.sneaker-profile-btn{
+  background:none;
+  border:none;
+  color:#F5F5F0;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  font-weight:700;
+  font-family:inherit;
+  text-transform:uppercase;
+}
+
+.sneaker-profile-btn span{
+  font-size:9px;
+  color:#F0E040;
+}
+
+.sneaker-profile-btn:hover{
+  color:#F0E040;
+}
+
+.sneaker-profile-menu{
+
+  position:absolute;
+
+  top:38px;
+
+  right:0;
+
+  width:190px;
+
+  background:#0F0F0F;
+
+  border:1px solid #1E1E1E;
+
+  display:flex;
+
+  flex-direction:column;
+
+  box-shadow:0 15px 35px rgba(0,0,0,.6);
+
+  z-index:1000;
+
+}
+
+.sneaker-profile-menu button{
+
+  background:none;
+
+  border:none;
+
+  color:#F5F5F0;
+
+  padding:13px 16px;
+
+  text-align:left;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+  transition:.2s;
+
+}
+
+.sneaker-profile-menu button:hover{
+
+  background:#1A1A1A;
+
+  color:#F0E040;
+
+}
+
+.sneaker-profile-menu .logout{
+
+  color:#ff5a5a;
+
+}
+
+.sneaker-profile-menu .logout:hover{
+
+  background:#220000;
+
+}
+
+.sneaker-drawer-logout{
+
+  background:none;
+
+  border:none;
+
+  color:#ff5a5a;
+
+  text-align:left;
+
+  font-size:13px;
+
+  padding:12px 0;
+
+  cursor:pointer;
+
+  border-bottom:1px solid #1A1A1A;
+
+}

@@ -1,0 +1,111 @@
+/* RESUMEN DE INVENTARIO */
+.inventory-resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: #1A1A1A;
+  margin-bottom: 24px;
+}
+
+.resumen-card {
+  background: #0A0A0A;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resumen-card span {
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.resumen-card strong {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.resumen-card.green strong { color: #2ECC71; }
+.resumen-card.orange strong { color: #F0A020; }
+.resumen-card.red strong { color: #E74C3C; }
+
+/* MARCA en la tarjeta */
+.inventory-brand {
+  font-size: 11px;
+  color: #666;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* BOTONES DE ACCIÓN */
+.inventory-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn-ajustar-stock,
+.btn-ver-historial {
+  flex: 1;
+  padding: 8px 0;
+  background: none;
+  border: 1px solid #2A2A2A;
+  color: #888;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.btn-ajustar-stock:hover {
+  border-color: #F0E040;
+  color: #F0E040;
+}
+
+.btn-ver-historial:hover {
+  border-color: #3498DB;
+  color: #3498DB;
+}
+
+/* TABLA DE HISTORIAL (dentro del modal) */
+.historial-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-table th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #666;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.historial-table td {
+  padding: 10px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #1E1E1E;
+}
+
+.historial-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tipo-entrada {
+  color: #2ECC71;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.tipo-salida {
+  color: #E74C3C;
+  text-transform: capitalize;
+  font-weight: 700;
+}
