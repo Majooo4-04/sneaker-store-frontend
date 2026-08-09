@@ -204,20 +204,26 @@
   padding: 0;
 }
 
+/* ==========================
+   DRAWER MÓVIL — OVERLAY PANTALLA COMPLETA
+   Reemplaza tu regla .sneaker-drawer existente por esta.
+========================== */
+
 .sneaker-drawer {
-  position: absolute;
-  top: 56px;
+  position: fixed;
+  top: 56px;              /* debajo del navbar */
   left: 0;
   right: 0;
-  background: #0A0A0A;
-  border-bottom: 1px solid #1E1E1E;
+  bottom: 0;               /* llega hasta el fondo de la pantalla */
+  background: #0A0A0A;     /* fondo sólido, tapa todo lo de atrás */
   display: flex;
   flex-direction: column;
-  padding: 16px 24px;
+  padding: 16px 24px 32px;
   text-align: left;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+  overflow-y: auto;        /* scroll interno si el contenido crece (ej. acordeones abiertos) */
+  -webkit-overflow-scrolling: touch;
+  z-index: 1500;
 }
-
 .sneaker-drawer-link {
   padding: 12px 0;
   border-bottom: 1px solid #1A1A1A;
@@ -379,4 +385,25 @@
 
   border-bottom:1px solid #1A1A1A;
 
+}
+/* ==========================
+   ACORDEÓN DEL DRAWER MÓVIL
+   (agregar junto a .sneaker-drawer-subtitle en Navbar.css)
+========================== */
+
+.sneaker-drawer-accordion-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* hereda color, tamaño y mayúsculas de .sneaker-drawer-subtitle */
+}
+
+.sneaker-drawer-arrow {
+  font-size: 9px;
+  color: #F0E040;
 }

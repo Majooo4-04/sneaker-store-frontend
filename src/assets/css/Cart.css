@@ -284,3 +284,90 @@ transition:.2s;
 border-color:#F0E040;
 color:#F0E040;
 }
+/* ==========================
+   RESPONSIVE — agregar al final de Cart.css
+========================== */
+
+/* Evita que cualquier desborde genere scroll horizontal en toda la página */
+.cart-page {
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;   /* deja de ser 1fr 320px */
+    margin: 24px 20px;
+  }
+
+  .cart-summary {
+    border-left: none;
+    border-top: 1px solid #1A1A1A;
+  }
+}
+
+@media (max-width: 640px) {
+  .cart-header {
+    padding: 32px 20px 20px;
+  }
+
+  .cart-title {
+    font-size: 32px;      /* antes 48px, desbordaba en pantallas chicas */
+  }
+
+  .cart-layout {
+    margin: 16px 12px;
+  }
+
+  /* Cada item pasa de una fila apretada a dos filas */
+  .cart-item {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .cart-item-number {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 20px;
+    min-width: auto;
+  }
+
+  .cart-item-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cart-item-info {
+    flex: 1 1 auto;
+    min-width: 0; /* permite que el texto largo se ajuste sin desbordar */
+  }
+
+  .cart-item-name {
+    font-size: 13px;
+  }
+
+  /* Fila inferior: cantidad + precio + eliminar */
+  .cart-qty {
+    order: 3;
+  }
+
+  .cart-item-price {
+    order: 4;
+    min-width: auto;
+    margin-left: auto;
+  }
+
+  .cart-remove {
+    order: 5;
+  }
+
+  .cart-summary {
+    padding: 20px 16px;
+  }
+
+  .cart-summary-total strong {
+    font-size: 22px;
+  }
+}

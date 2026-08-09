@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .perfil-modal{

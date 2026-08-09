@@ -119,6 +119,12 @@
   text-transform:uppercase;
   padding:5px 10px;
   border:1px solid;
+  transition: opacity 0.2s;
+  user-select: none;
+}
+
+.user-status:hover {
+  opacity: 0.8;
 }
 
 .user-status.active{
@@ -175,25 +181,7 @@
   }
 }
 
-/* Feedback visual al pasar el cursor sobre la etiqueta de estado */
-.user-status {
-  transition: opacity 0.2s;
-  user-select: none;
-}
 
-.user-status:hover {
-  opacity: 0.8;
-}
-
-/* Estilo simple si quieres diferenciar el botón de eliminar de las tarjetas */
-.btn-delete-card {
-  background-color: #ff4444;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 /* SWITCH INTERACTIVO (TOGGLE) */
 .status-switch-container {
   display: flex;
@@ -220,7 +208,7 @@
   position: absolute;
   cursor: pointer;
   inset: 0;
-  background-color: #ccc;
+  background-color: #2A2A2A;   /* antes #ccc — ahora acorde al tema oscuro */
   transition: .3s;
   border-radius: 24px;
 }
@@ -232,13 +220,13 @@
   width: 18px;
   left: 3px;
   bottom: 3px;
-  background-color: white;
+  background-color: #F5F5F0;   /* antes white puro */
   transition: .3s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #2e7d32; /* Verde activo */
+  background-color: #2ECC71;   /* mismo verde que .user-status.active */
 }
 
 input:checked + .slider:before {
@@ -247,63 +235,97 @@ input:checked + .slider:before {
 
 /* ETIQUETA DE TEXTO */
 .status-label {
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 .status-label.activo {
-  color: #2e7d32;
+  color: #2ECC71;
 }
 
 .status-label.inactivo {
-  color: #c62828;
+  color: #E74C3C;
 }
 
-/* ESTILOS DE BOTONES */
+/* ESTILOS DE BOTONES — ahora consistentes con el resto del panel admin */
 .btn-primary {
-  background: #FFD600;
-  border: none;
-  padding: 10px 18px;
-  font-weight: bold;
-  border-radius: 8px;
+  background: #F0E040;
+  border: 1px solid #F0E040;
+  padding: 11px 18px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-radius: 0;
   cursor: pointer;
-  color: #111;
+  color: #0A0A0A;
+  transition: .15s;
+}
+
+.btn-primary:hover {
+  background: #F5F5F0;
+  border-color: #F5F5F0;
 }
 
 .btn-edit {
-  background: #eee;
-  border: none;
+  background: none;
+  border: 1px solid rgba(240,224,64,.3);
   padding: 8px 14px;
-  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-radius: 0;
   cursor: pointer;
-  color: #333;
+  color: #F0E040;
+  transition: .15s;
+}
+
+.btn-edit:hover {
+  background: rgba(240,224,64,.08);
 }
 
 .btn-delete {
-  background: #ff4444;
-  color: white;
-  border: none;
+  background: none;
+  border: 1px solid rgba(231,76,60,.3);
   padding: 8px 14px;
-  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-radius: 0;
   cursor: pointer;
+  color: #E74C3C;
+  transition: .15s;
+}
+
+.btn-delete:hover {
+  background: rgba(231,76,60,.08);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .form-group label {
-  font-weight: bold;
-  font-size: 14px;
-  color: #333;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #666;
 }
+
+
 /* FILTRO DE USUARIOS */
 .filtro-usuarios {
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap;   /* evita desborde/scroll horizontal si hay varios filtros */
 }
 
 .filtro-btn {

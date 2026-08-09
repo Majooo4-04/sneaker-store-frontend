@@ -529,3 +529,93 @@
   color: #F5F5F0;
   letter-spacing: -0.03em;
 }
+/* ==========================
+   RESPONSIVE — agregar al final de Checkout.css
+========================== */
+
+.root {
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    margin: 24px 20px;
+  }
+
+  .summary {
+    border-left: none;
+    border-top: 1px solid #1A1A1A;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 32px 20px 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .layout {
+    margin: 16px 12px;
+  }
+
+  .form-area {
+    padding: 20px;
+  }
+
+  /* Stepper: labels ocupan mucho espacio en fila, los ocultamos y dejamos solo el círculo numerado */
+  .stepper {
+    padding: 16px 20px;
+  }
+
+  .step-label {
+    display: none;
+  }
+
+  .step-line {
+    margin: 0 8px;
+  }
+
+  /* Campos de formulario: de 2/3 columnas a 1 sola columna */
+  .form-grid-2,
+  .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn-primary.flex-1 {
+    width: 100%;
+  }
+
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .summary {
+    padding: 20px 16px;
+  }
+
+  .summary-total-num {
+    font-size: 22px;
+  }
+
+  .confirm {
+    padding: 32px 16px;
+  }
+
+  .confirm-title {
+    font-size: 24px;
+  }
+
+  .confirm-item-img,
+  .summary-item-img {
+    width: 44px;
+    height: 44px;
+  }
+}

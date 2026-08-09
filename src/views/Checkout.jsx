@@ -339,7 +339,7 @@ export default function Checkout() {
 
                 className="btn-primary"
 
-                onClick={() => navigate("/mis-pedidos")}
+                onClick={() => navigate("/orders")}
 
               >
 

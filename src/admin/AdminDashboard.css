@@ -120,9 +120,12 @@
 
 /* TABLA DE PEDIDOS */
 
-.orders table{
-  width:100%;
-  border-collapse:collapse;
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .orders thead th{
