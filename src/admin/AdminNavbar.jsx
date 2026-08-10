@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bell,  ChevronDown, User, LogOut } from "lucide-react";
 import PerfilModal from "./PerfilModal";
+import { cerrarSesion as cerrarSesionService } from "../services/authService";
 import "../assets/css/AdminNavbar.css";
 
 export default function AdminNavbar() {
@@ -26,8 +27,8 @@ export default function AdminNavbar() {
   };
 
   const cerrarSesion = () => {
-    localStorage.removeItem("token");
-    window.location.href = "/login"; // ajusta a tu ruta real de login
+    cerrarSesionService(); // borra token Y usuario, en un solo lugar
+    window.location.href = "/login";
   };
 
   return (

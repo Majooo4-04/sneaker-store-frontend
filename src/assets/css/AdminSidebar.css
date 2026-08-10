@@ -255,6 +255,9 @@ nav{
 
     padding:16px 20px;
 
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+
   }
 
 
@@ -264,6 +267,7 @@ nav{
     border-bottom:none;
 
     padding-bottom:0;
+    flex-shrink:0;
 
   }
 
@@ -284,6 +288,7 @@ nav{
     margin-top:0;
 
     gap:4px;
+    flex-shrink:0;
 
   }
 
@@ -306,6 +311,7 @@ nav{
     border-top:none;
 
     padding-top:0;
+    flex-shrink:0;
 
   }
 

@@ -7,10 +7,13 @@ import {
   Boxes,
   ShoppingCart,
   Users,
-  LogOut
+  LogOut,
+  Gauge
 } from "lucide-react";
 
+import { cerrarSesion as cerrarSesionService } from "../services/authService";
 import "../assets/css/AdminSidebar.css";
+
 
 
 export default function AdminSidebar(){
@@ -18,8 +21,7 @@ export default function AdminSidebar(){
 
 const cerrarSesion = () => {
 
-  localStorage.removeItem("token");
-  localStorage.removeItem("usuario");
+  cerrarSesionService(); // borra token Y usuario, en un solo lugar
 
   window.location.href="/login";
 
@@ -56,6 +58,11 @@ link:"/admin/orders"
 name:"Usuarios",
 icon:<Users size={20}/>,
 link:"/admin/users"
+},
+{
+  name:"Estadísticas de Lighthouse",
+  icon:<Gauge size={20}/>,
+  link:"/admin/lighthouse"
 }
 
 ];
