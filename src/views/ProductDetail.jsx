@@ -468,6 +468,7 @@ export default function ProductDetail() {
   }, [id]);
 
   const [reviews, setReviews] = useState([]);
+  
   const [reviewsLoading, setReviewsLoading] = useState(true);
 
   useEffect(() => {
